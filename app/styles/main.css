@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+body,html {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  font-family: 'Nunito', sans-serif;
+}
+/*HOME*/
+.home{
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.hideMe{
+  display: none!important;
+}
+.has-error{
+    border-color: #f01727;
+}
+.goHome{
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #2bbbad;
+  cursor: pointer;
+  z-index: 4;
+}
+.goHome:hover , .goHome:focus , .goHome:visited{
+  text-decoration: none;
+  color: #2bbbad;
+}
+.searchArtist{
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top:0;
+  bottom: 0;
+  width: 200px;
+  height: 40px;
+  line-height: 40px;
+  margin: auto;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  display: inline-block;
+  overflow: hidden;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  vertical-align: middle;
+  z-index: 1;
+  text-decoration: none;
+  color: #fff;
+  background-color: #26a69a;
+  text-align: center;
+  letter-spacing: .5px;
+  transition: .2s ease-out;
+  cursor: pointer;
+  transition: .3s ease-out;
+}
+.searchArtist:hover ,.searchArtist:focus,.searchArtist:visited{
+  text-decoration: none;
+  outline: none;
+  border: none;
+  color: #fff;
+  background-color: #2bbbad;
+  box-shadow: 0 3px 3px 0 rgba(0,0,0,0.14), 0 1px 7px 0 rgba(0,0,0,0.12), 0 3px 1px -1px rgba(0,0,0,0.2);
+}
+.searchContainer{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top:0;
+  bottom: 0;
+  margin: auto;
+  width: 500px;
+  height: 180px;
+  z-index: 2;
+  background-color: #fff;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+  transition: box-shadow .25s;
+  border-radius: 2px;
+  padding: 10px 20px;
+}
+.searchContainer .searchArtist{
+  position: relative;
+}
+.tabsContainer{
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top:0;
+  margin:auto;
+  width: 600px;
+  height: 430px;
+  z-index: 3;
+}
+.tabsContainer li{
+  width: 25%;
+}
+.tabsContainer li a.ng-binding{
+  color: #ffffff;
+  background-color: #26a69a;
+  opacity: .5;
+  text-overflow: ellipsis;
+  overflow: hidden;
+   white-space: nowrap;
+}
+.tabsContainer li.active a.ng-binding{
+  color: #ffffff;
+  background-color: #26a69a;
+  opacity: 1;
+}
+.tabsContainer .table{
+  width:100%;
+}
+.tabsContainer .table tbody tr td{
+  padding: 5px;
+}
+@media all and (max-width : 600px){
+.goHome{
+  top:-2px;
+}
+.searchContainer{
+  width: 90%;
+  height: 240px;
+}  
+.tabsContainer{
+  display: block;
+  position: relative;
+  margin:auto;
+  width: 100%;
+  height: 100%;
+  padding: 20px 10px;
+}
+}
