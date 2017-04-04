@@ -8,7 +8,7 @@
   <a class="searchArtist" ng-class="{'hideMe': !vm.showartistlink}" ng-click="vm.showoverlay = !vm.showoverlay">Search Artist</a>
   <a ng-click="vm.showoverlay = false;vm.showartistlink=true;vm.showtabs=false;vm.artist={};" class="goHome" ng-if="vm.showoverlay || vm.showtabs">x</a>
   <div class="searchContainer" ng-class="{'hideMe': !vm.showoverlay}">
-    <form class="form-horizontal" name="artistForm" novalidate ng-submit="artistForm.$valid && vm.getTracks(searchContainer);" role="form">
+    <form class="form-horizontal" name="artistForm" novalidate ng-submit="artistForm.$valid && vm.getTracks(artistForm);" role="form">
       <div class="form-group">
         <label for="inputEmail3" class="col-md-4 col-sm-4 control-label">Name</label>
         <div class="col-md-8 col-sm-8">
@@ -63,3 +63,4 @@
     </uib-tabset>
   </div>
 </div>
+

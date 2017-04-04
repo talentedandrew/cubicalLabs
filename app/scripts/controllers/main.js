@@ -22,19 +22,22 @@ angular.module('cubicalLabsApp')
         url:$sce.trustAsResourceUrl('http://itunes.apple.com/search?term='+vm.artist.name.toLowerCase()+'&limit='+vm.artist.track)
         })
       .then(function(response){
-        console.log(response);
         vm.artists = response.data.results;
         vm.showoverlay = false;
         vm.showartistlink = false;
         vm.showtabs = true;
+        vm.artist={};
+        artistForm.$setPristine();    
+        artistForm.$setUntouched();  
       })
       .catch(function(error){
         vm.showoverlay = false;
         vm.showartistlink = true;
         vm.showtabs = false;
         vm.artist={};
+        artistForm.$setPristine();    
+        artistForm.$setUntouched();  
       });
-      artistForm.$setPristine();    
-      artistForm.$setUntouched();
+      
     }
   }]);
