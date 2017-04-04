@@ -17,7 +17,6 @@ angular.module('cubicalLabsApp')
     vm.name = /^jack$/i ;
     vm.track = /^4$/;
     vm.getTracks = function(artistForm){
-      console.log(vm.artist);
       $http({
         method: 'jsonp',
         url:$sce.trustAsResourceUrl('http://itunes.apple.com/search?term='+vm.artist.name.toLowerCase()+'&limit='+vm.artist.track)

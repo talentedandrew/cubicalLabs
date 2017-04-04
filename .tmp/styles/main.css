@@ -5,6 +5,7 @@ body,html {
   width: 100%;
   height: 100%;
   font-family: 'Nunito', sans-serif;
+  background: #171717;
 }
 /*HOME*/
 .home{
@@ -18,6 +19,44 @@ body,html {
 }
 .has-error{
     border-color: #f01727;
+}
+#gui{
+    display: none!important;
+}
+#canvas-container {
+	background: #000 url(http://jackrugile.com/lab/fireworks-v2/images/bg.jpg);
+    height: 100%;
+	position: absolute;
+	top: 0%;
+    width: 100%;
+	z-index: 0;
+}
+#skyline {
+	background: url(http://jackrugile.com/lab/fireworks-v2/images/skyline.png) repeat-x 50% 0;
+	bottom: 0;
+	height: 135px;
+	left: 0;
+	position: absolute;
+	width: 100%;
+	z-index: 1;	
+}
+#mountains1 {
+	background: url(http://jackrugile.com/lab/fireworks-v2/images/mountains1.png) repeat-x 40% 0;
+	bottom: 0;
+	height: 200px;
+	left: 0;
+	position: absolute;
+	width: 100%;
+	z-index: 1;	
+}
+#mountains2 {
+	background: url(https://jackrugile.com/lab/fireworks-v2/images/mountains2.png) repeat-x 30% 0;
+	bottom: 0;
+	height: 250px;
+	left: 0;
+	position: absolute;
+	width: 100%;
+	z-index: 1;	
 }
 .goHome{
   position: absolute;
@@ -83,7 +122,7 @@ body,html {
   width: 500px;
   height: 180px;
   z-index: 2;
-  background-color: #fff;
+  background-color: #222;
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
   transition: box-shadow .25s;
   border-radius: 2px;
@@ -91,6 +130,9 @@ body,html {
 }
 .searchContainer .searchArtist{
   position: relative;
+}
+.searchContainer .form-horizontal .control-label{
+    color: #ffffff;
 }
 .tabsContainer{
   display: block;
@@ -122,9 +164,14 @@ body,html {
 }
 .tabsContainer .table{
   width:100%;
+  background-color: #222;
+  color: #ffffff;    
 }
 .tabsContainer .table tbody tr td{
   padding: 5px;
+}
+.tabsContainer .table-hover>tbody>tr:hover {
+    background-color: #060606;
 }
 @media all and (max-width : 600px){
 .goHome{
